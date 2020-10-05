@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="fonts.css" />
+        <style>
+            /* vietnamese */
+            @font-face {
+            font-family: 'Muli';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/muli/v22/7Aulp_0qiz-aVz7u3PJLcUMYOFnOkEk40e6fwniDtzNAAw.woff) format('woff');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+            }
+            /* latin-ext */
+            @font-face {
+            font-family: 'Muli';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/muli/v22/7Aulp_0qiz-aVz7u3PJLcUMYOFnOkEk50e6fwniDtzNAAw.woff) format('woff');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+            font-family: 'Muli';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/muli/v22/7Aulp_0qiz-aVz7u3PJLcUMYOFnOkEk30e6fwniDtzM.woff) format('woff');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+
+            /* cyrillic-ext */
+            @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/raleway/v17/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCFPrcVIT9d0c-dYA.woff) format('woff');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+            }
+            /* cyrillic */
+            @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/raleway/v17/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCMPrcVIT9d0c-dYA.woff) format('woff');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+            }
+            /* vietnamese */
+            @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/raleway/v17/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCHPrcVIT9d0c-dYA.woff) format('woff');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+            }
+            /* latin-ext */
+            @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/raleway/v17/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCGPrcVIT9d0c-dYA.woff) format('woff');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/raleway/v17/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrcVIT9d0c8.woff) format('woff');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+        html, body {
+            height: 100%;
+            background-color: #18191a;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font-family: Raleway;
+            color: #ffffff;
+        }
+
+        body > div * {
+            box-sizing: border-box;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #18191a;
+        }
+
+        .header-container {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 7px;
+            background-color: #191a1c;
+            border-bottom: 1px solid #373839;
+            height: 100px;
+        }
+        .logo {
+            display: block;
+            text-indent: -9999px;
+            width: 70px;
+            height: 45px;
+            background: url(date.svg);
+            background-size: 100px 82px;
+        }
+        .app-name {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 38px;
+        }
+
+        .circle-button-container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .rectagle-button {
+            height: 40px;
+            color: #ffffff;
+            font-size: bold;
+            outline: 0;
+            display: inline-block;
+            text-decoration: none;
+            background: transparent;
+            border-radius: 5px;
+            text-align: center;
+            overflow: hidden;
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 38px;
+            font-size: 16px;
+            border: 1px solid #373839;
+        }
+        
+        .circle-button {
+            height: 40px;
+            width: 40px;
+            color: #ffffff;
+            font-size: bold;
+            outline: 0;
+            display: inline-block;
+            text-decoration: none;
+            background: transparent;
+            border-radius: 50%;
+            text-align: center;
+            overflow: hidden;
+            font-size: 30px;
+        }
+        .rectagle-button:hover, .circle-button:hover {
+            background-color: #232626;
+        }
+
+        .add-event-button {
+            height: 50px;
+            width: 50px;
+            color: #0099ff;
+            font-size: bold;
+            outline: 0;
+            display: inline-block;
+            text-decoration: none;
+            background-color: #232626;
+            border-radius: 50%;
+            text-align: center;
+            overflow: hidden;
+            font-size: 40px;
+            line-height: 50px;
+        }
+        .add-event-button:hover {
+            background-color: #ffffff;
+        }
+        .right-arrow {
+            background: url(right-arrow.svg);
+            background-size: 32px 32px;
+        }
+        .left-arrow {
+            background: url(left-arrow.svg);
+            background-size: 32px 32px;
+        }
+        a:focus {
+            outline:0;
+        }
+
+        /* calendar section */
+        .calendar-container {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+        .calendar-sheet-container{
+            height: 100%;
+            display: flex;
+            flex-grow: 8;
+            flex-direction: column;
+            border-left: 1px solid #373839;
+            border-top: 1px solid #373839;
+        }
+
+        .calendar-add-event-container{
+            height: 100%;
+            flex-grow: 0.1;
+            flex-direction: column;
+            margin-left: 10px;
+            border-radius: 15px;
+            background-color: #232626;
+            border: 1px solid #393c3e;
+        }
+        .row {
+            display: flex;
+            height: 20%;
+            flex-grow: 1;
+            border-bottom: 1px solid #373839;
+        }
+        .column {
+            width: 14.287%;
+        }
+        .day {
+            height: 100%;
+            border-right: 1px solid #373839;
+            text-align: center;
+            padding-top: 10px
+        }
+        /* day header */
+        .row-header {
+            display: flex;
+            flex-grow: 0.05;
+        }
+        .column-header {
+            width: 14.287%;
+        }
+        .day-header {
+            height: 100%;
+            border-right: 1px solid #373839;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 12px;
+        }
+        .logo-container {
+            display: flex;
+            flex-grow: 0.2;
+        }
+        .button-container {
+            flex-grow: 2;
+        }
+        .add-event-container {
+            flex-grow: 2;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        input[type=text] {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #393c3e;
+            font-family: Muli;
+            color: #e4e6eb;
+            text-align: left;
+            padding: 5px;
+            background-color: #232626;
+            outline: none;
+            font-weight: normal;
+            display: inline-block;
+            text-indent: 10px;
+            margin: 10px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        input[type=text]:hover {
+            border-color: #e3e6ea;
+        }
+
+        input[type=text]:focus {
+            border-color: #2d84f4;
+        }
+        
+        textarea {
+            height: 200px;
+            width: 100%;
+            border-radius: 5px;
+            resize: none;
+            border: 1px solid #393c3e;
+            padding: 5px;
+            margin: 10px;
+            font-family: Muli;
+            font-size: 14px;
+            color: #e4e6eb;
+            text-align: left;
+            background-color: #232626;
+            outline: none;
+            font-weight: normal;
+            display: inline-block;
+            text-indent: 10px;
+        }
+
+        textarea:hover {
+            border-color: #e3e6ea;
+        }
+
+        textarea:focus {
+            border-color: #2d84f4;
+        }
+
+        .button-save {
+            height: 35px;
+            border-radius: 5px;
+            width: 50%;
+            border: 0;
+            font-family: Muli;
+            font-weight: bold;
+            color: #e4e6eb;
+            text-align: center;
+            background-color: #2d88ff;
+            margin-left: 5px;
+            margin-top: 5px;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+
+        .button-clear {
+            width: 50%;
+            height: 35px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 0;
+            font-family: Muli;
+            color: #e4e6eb;
+            text-align: center;
+            background-color: #303132;
+            margin-right: 5px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .field-group {
+            display: flex;
+        }
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 10px;
+        }
+        .event-link {
+            height: 20px;
+            color: #ffffff;
+            font-size: bold;
+            outline: 0;
+            text-decoration: none;
+            background: #006eff;
+            border-radius: 5px;
+            text-align: center;
+            padding-left: 2px;
+            padding-right: 2px;
+            line-height: 20px;
+            font-size: 10px;
+            border: none;
+            width: 100%;
+            display: block;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
+            margin-top: 2px;
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        .event-link-green {
+            height: 20px;
+            color: #ffffff;
+            font-size: bold;
+            outline: 0;
+            text-decoration: none;
+            background: #178a34;
+            border-radius: 5px;
+            text-align: center;
+            padding-left: 2px;
+            padding-right: 2px;
+            line-height: 20px;
+            font-size: 10px;
+            border: none;
+            width: 100%;
+            display: block;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
+            margin-top: 2px;
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        </style>
+    </head> 
+    <body>
+        <div class="main-container">
+            <div class="header-container">
+                <div class="logo-container">
+                    <a href="/" class="logo">Calendar</a>
+                    <span class="app-name">Calendar</span>
+                </div>
+                <div class="button-container">
+                    <a class="rectagle-button" href="/">Today</a>
+                    <a class="circle-button" href="#">&#8249;</a>
+                    <a class="circle-button" href="#">&#8250;</a>
+                </div>
+                <div class="add-event-container">
+                    <a class="add-event-button" href="#">&#43;</a>
+                </div>
+            </div>
+            <div class="calendar-container">
+                <div class="calendar-sheet-container">
+                    <div class="row-header">
+                        <div class="column-header day-header">SUN</div>
+                        <div class="column-header day-header">MON</div>
+                        <div class="column-header day-header">TUE</div>
+                        <div class="column-header day-header">WEB</div>
+                        <div class="column-header day-header">THU</div>
+                        <div class="column-header day-header">FRI</div>
+                        <div class="column-header day-header">SAT</div>
+                    </div>
+                    <div class="row">
+                        <div class="column day">1</div>
+                        <div class="column day">2</div>
+                        <div class="column day">3</div>
+                        <div class="column day">4</div>
+                        <div class="column day">5</div>
+                        <div class="column day">6</div>
+                        <div class="column day">7</div>
+                    </div>
+                    <div class="row">
+                        <div class="column day">1</div>
+                        <div class="column day">2</div>
+                        <div class="column day">
+                            3
+                            <a href="#" class="event-link-green">10am Greenway Health Team 12 Scrum call</a>
+                            <a href="#" class="event-link">3.30pm Emids Founding Day</a>
+                        </div>
+                        <div class="column day">4</div>
+                        <div class="column day">5</div>
+                        <div class="column day">6</div>
+                        <div class="column day">7</div>
+                    </div>
+                    <div class="row">
+                        <div class="column day">1</div>
+                        <div class="column day">2</div>
+                        <div class="column day">3</div>
+                        <div class="column day">4</div>
+                        <div class="column day">5</div>
+                        <div class="column day">6</div>
+                        <div class="column day">7</div>
+                    </div>
+                    <div class="row">
+                        <div class="column day">1</div>
+                        <div class="column day">2</div>
+                        <div class="column day">3</div>
+                        <div class="column day">4</div>
+                        <div class="column day">5</div>
+                        <div class="column day">6</div>
+                        <div class="column day">7</div>
+                    </div>
+                    <div class="row">
+                        <div class="column day">1</div>
+                        <div class="column day">2</div>
+                        <div class="column day">3</div>
+                        <div class="column day">4</div>
+                        <div class="column day">5</div>
+                        <div class="column day">
+                            6
+                            <a href="#" class="event-link-green">10am Greenway Health Team 12 Scrum call</a>
+                            <a href="#" class="event-link">2.30pm Greenway - All Hands</a>
+                        </div>
+                        <div class="column day">7</div>
+                    </div>
+                </div>
+                <div class="calendar-add-event-container">
+                    <div class="field-group">
+                        <input type="text" placeholder="Add title"/>
+                    </div>
+                    <div class="field-group">
+                        <input type="text" placeholder="October 2 2020"/>
+                        <input type="text" placeholder="11:30 AM"/>
+                        <input type="text" placeholder="12:00 PM"/>
+                    </div>
+                    <div class="field-group">
+                        <textarea placeholder="Add description"></textarea>
+                    </div>
+                    <div class="button-group">
+                        <button class="button-save">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
